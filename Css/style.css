@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base fonts: Montserrat for most UI, Anton for brand */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 80px;
+    background: url('https://via.placeholder.com/1500x800/808080/FFFFFF?text=Fundo+Academia') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+:root {
+    --color-primary: #bf0b0b;
+    --color-secondary: #b4b4b4;
+    --color-background: #d4d4dc;
+    --color-text: #ffffff;
+    --color-accent: #5a5557;
+    --color-subtext: #1b1919;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: var(--color-secondary) !important;
+}
+
+.nav-link {
+    color: var(--color-subtext) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, 
+.nav-link:focus {
+    color: var(--color-primary) !important;
+}
+
+.dropdown-menu {
+    background-color: var(--color-secondary);
+}
+
+.dropdown-item {
+    color: var(--color-text);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.logo {
+    padding: 5px;
+}
+
+.logo-text {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5rem;
+}
+
+.logo-text span {
+    color: var(--color-primary);
+}
+
+.links {
+    font-weight: 500;
+    font-family: "Anton", sans-serif;
+    font-size: 1.2rem;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+}
+
+
+
+.Banner-1 h1 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-text);
+    font-size: 3rem;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.Banner-1 p {
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-text);
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    max-width: 800px;
+}
+
+@media (max-width: 992px) {
+    /* Ajuste para o Título (H1) */
+    .Banner-1 h1 {
+        /* Diminuir a fonte drasticamente para caber */
+        font-size: 1.4rem; 
+        
+        /* Ajustar a posição para que o H1 não fique muito baixo */
+        top: 50%; 
+    }
+
+    /* Ajuste para o Parágrafo (P) */
+    .Banner-1 p {
+        /* Diminuir a fonte */
+        font-size: 0.8rem;
+        
+        /* Afastar o P do H1 o suficiente para não sobrepor */
+        top: 65%; 
+        
+        /* Reduzir a largura máxima para se adequar a telas estreitas */
+        max-width: 90%; 
+    }
+}
+
+.Banner-1 button {
+    font-family: "Anton", sans-serif;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    padding: 10px 10px;
+    border: 2px solid var(--color-secondary);
+    color: var(--color-primary);
+    cursor: pointer;
+    
+}
+
+.Banner-1 button:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
