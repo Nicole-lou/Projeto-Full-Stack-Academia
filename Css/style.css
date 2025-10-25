@@ -10,6 +10,7 @@ body {
     margin-top: 80px;
     background: url('https://via.placeholder.com/1500x800/808080/FFFFFF?text=Fundo+Academia') no-repeat center center fixed; 
     background-size: cover;
+    
 }
 
 :root {
@@ -47,7 +48,7 @@ body {
 .dropdown-item:hover,
 .dropdown-item:focus {
     background-color: var(--color-secondary);
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
 }
 
 .logo {
@@ -83,7 +84,7 @@ body {
 
 
 
-.Banner-1 h1 {
+.Banner h1 {
     position: absolute;
     top: 60%;
     left: 50%;
@@ -95,7 +96,7 @@ body {
     text-align: center;
 }
 
-.Banner-1 p {
+.Banner p {
     position: absolute;
     top: 68%;
     left: 50%;
@@ -109,7 +110,7 @@ body {
 
 @media (max-width: 992px) {
     /* Ajuste para o Título (H1) */
-    .Banner-1 h1 {
+    .Banner h1 {
         /* Diminuir a fonte drasticamente para caber */
         font-size: 1.4rem; 
         
@@ -118,7 +119,7 @@ body {
     }
 
     /* Ajuste para o Parágrafo (P) */
-    .Banner-1 p {
+    .Banner p {
         /* Diminuir a fonte */
         font-size: 0.8rem;
         
@@ -130,7 +131,7 @@ body {
     }
 }
 
-.Banner-1 button {
+.Banner button {
     font-family: "Anton", sans-serif;
     position: absolute;
     top: 80%;
@@ -144,7 +145,171 @@ body {
     
 }
 
-.Banner-1 button:hover {
+.Banner button:hover {
     background-color: var(--color-secondary);
     color: var(--color-primary);
 }
+
+#why-choose-us {
+    background-color: var(--color-background);
+    width: 100%;
+    height: 100%;
+}
+
+.section-title {
+    color: var(--color-text);
+    font-family: "Anton", sans-serif;
+    font-size: 2rem;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.card-title {
+    font-family: "Anton", sans-serif;
+    font-size: 1.3rem;
+    color: var(--color-subtext);
+}
+
+.card-text {
+    font-family: "Montserrat", sans-serif;
+   font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--color-text);
+    
+}
+
+.card-feature {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card-feature:hover {
+    transform: translateY(-5px); 
+}
+
+.card-red {
+    background-color: var(--color-primary) !important;
+    color: var(--color-text) !important;
+}
+
+.card-gray {
+    background-color: var(--color-accent) !important;
+    color: var(--color-text) !important;
+}
+
+/* Ícones dos cards */
+.card-feature .card-body {
+    /* Forçar alinhamento à esquerda dentro do corpo do card para que título e ícone comecem no mesmo ponto */
+    align-items: flex-start;
+}
+
+.card-icon {
+    width: 40px;
+    height: auto;
+    display: block;
+    margin-bottom: 0.5rem;
+    align-self: flex-start; /* garante que o ícone fique alinhado ao início do conteúdo */
+    margin-left: 0.6rem; /* pequena indentação para ficar próximo do início do título */
+}
+
+/* Filtrar/tintar o ícone para as cores desejadas */
+.icon-subtext {
+    /* tornar o ícone escuro (próximo de --color-subtext) */
+    filter: grayscale(1) brightness(0) saturate(100%);
+}
+
+.icon-accent {
+    /* aproximar para --color-accent; valores heurísticos */
+    filter: grayscale(1) sepia(1) saturate(300%) hue-rotate(200deg) brightness(0.6);
+}
+
+/* Section About: banner com conteúdo centralizado sobre a imagem */
+#about {
+    width: 100%;
+}
+
+#about .about-banner {
+    background-image: url('../img/ENERGYFITNESS-BANNER5.png');
+    background-size: cover;
+    background-position: center;
+    height: 420px;
+    position: relative;
+}
+
+#about .about-content h1 {
+    color: var(--color-text);
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+#about .about-content p {
+    color: var(--color-text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    max-width: 900px;
+    margin: 1rem auto;
+}
+
+/* Botão com a mesma aparência do carrossel, sem posicionamento absoluto */
+.banner-btn {
+    font-family: "Anton", sans-serif;
+    font-size: 1.2rem;
+    padding: 10px 10px;
+    border: 2px solid var(--color-secondary);
+    color: var(--color-primary);
+    background: transparent;
+    cursor: pointer;
+}
+
+.banner-btn:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+/* Seção About Details */
+.about-bg {
+    background-color: var(--color-background);
+    width: 100%;
+}
+
+.about-details h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5rem;
+    color: var(--color-text);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.about-details h2 span {
+    color: var(--color-primary);
+}
+
+.about-details p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.about-details strong {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.mission-img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
