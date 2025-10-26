@@ -251,7 +251,7 @@ body {
 #about .about-content p {
     color: var(--color-text);
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     max-width: 900px;
     margin: 1rem auto;
 }
@@ -272,7 +272,8 @@ body {
     color: var(--color-primary);
 }
 
-/* Seção About Details */
+
+/* Section About Details */
 .about-bg {
     background-color: var(--color-background);
     width: 100%;
@@ -292,7 +293,7 @@ body {
 
 .about-details p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: var(--color-text);
     margin-bottom: 1rem;
 }
@@ -313,3 +314,250 @@ body {
     object-fit: cover;
 }
 
+/* Seção Personal Trainers */
+#personal-trainers {
+    background-color: var(--color-accent);
+    width: 100%;
+    padding: 4rem 0;
+}
+
+.personal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Em telas médias (md) ou maiores, cards ficam lado a lado */
+@media (min-width: 768px) {
+    .personal-container {
+        flex-direction: row;
+    }
+    .personal-box {
+        width: 340px; /* Largura fixa em desktop para manter tamanhos iguais */
+    }
+}
+
+.personal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    background: transparent;
+    transition: transform 0.3s ease;
+    width: 100%; /* Ocupa toda largura em mobile */
+    max-width: 340px; /* Limita largura máxima mesmo em mobile */
+}
+
+.personal-box:hover {
+    transform: translateY(-5px);
+}
+
+.personal-img img {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.personal-title {
+    color: var(--color-text);
+    font-family: 'Anton', sans-serif;
+    font-size: 1.4rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.personal-text {
+    color: var(--color-text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+
+/* Seção Gym Passes */
+#gym-passes {
+    background-color: var(--color-accent);
+    width: 100%;
+    padding: 4rem 0;
+}
+
+.section-title span {
+    color: var(--color-primary);
+}
+
+.section-subtitle {
+    color: var(--color-text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+
+/* Plan pricing cards (gym-passes) */
+.plan-card {
+    background: rgba(0,0,0,0.45); /* subtle darker card by default */
+    border: none;
+    color: var(--color-text);
+}
+
+.plan-card--highlight {
+    background-color: var(--color-primary) !important; /* primeira coluna pedida */
+
+}
+
+.plan-card--highlight .plan-title,
+.plan-card--highlight .plan-price {
+    color: var(--color-text);
+}
+
+
+.plan-title {
+    font-family: 'Anton', sans-serif;
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+}
+
+.plan-subtitle {
+    font-family: 'Anton', sans-serif;
+    color: var(--color-subtext);
+    font-size: 0.99rem;
+    margin-bottom: 0.5rem;
+}
+
+.plan-price {
+    font-family: 'Anton', sans-serif;
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.plan-desc {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-subtext);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.plan-features li {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--color-subtext);
+    margin: 0.99rem 0;
+}
+
+.plan-features i {
+    color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+    .plan-card .card-body {
+        min-height: 360px; /* keep visual balance between cards in desktop */
+    }
+}
+
+/* Botão do card destacado: texto na cor --color-text */
+.plan-card--highlight .banner-btn {
+    color: var(--color-text);
+    border-color: var(--color-secondary);
+}
+
+#adress {
+    background-color: var(--color-background);
+    width: 100%;
+    padding: 2rem 0;
+}
+
+#adress h1 {
+    font-family: 'Anton', sans-serif;
+    color: var(--color-subtext);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+#adress p {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-subtext);
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.adress-contact {
+    font-family: 'Anton', sans-serif;
+    color: var(--color-primary);
+    font-size: 1.9rem;
+    margin: 0.5rem 0;
+}
+
+.adress-hours {
+    font-family: 'Anton', sans-serif;
+    color: var(--color-primary);
+    font-size: 1.9rem;
+    margin: 3rem;
+}
+
+.adress-week {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+#adress span {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+/* Site footer styling */
+.site-footer {
+    background-color: var(--color-accent);
+    font-family: 'Anton', sans-serif;
+    color: var(--color-text);
+    padding: 2rem 0;
+}
+
+.site-footer h4 {
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+}
+
+.site-footer a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.site-footer a:hover {
+    color: var(--color-primary);
+}
+
+.footer-social-icon {
+    width: 28px;
+    height: auto;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.6rem; /* spacing similar to other nav lists */
+}
+
+.footer-copy {
+    color: var(--color-primary);
+    font-family: 'Anton', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+@media (max-width: 767px) {
+    .site-footer .footer-social ul {
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+}
