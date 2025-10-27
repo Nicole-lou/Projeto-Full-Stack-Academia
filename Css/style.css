@@ -7,8 +7,8 @@
 /* Base fonts: Montserrat for most UI, Anton for brand */
 body {
     font-family: 'Montserrat', sans-serif;
+    font-family: 'Anton', sans-serif;
     margin-top: 80px;
-    background: url('https://via.placeholder.com/1500x800/808080/FFFFFF?text=Fundo+Academia') no-repeat center center fixed; 
     background-size: cover;
     
 }
