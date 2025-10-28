@@ -398,13 +398,13 @@ body {
 
 /* Plan pricing cards (gym-passes) */
 .plan-card {
-    background: rgba(0,0,0,0.45); /* subtle darker card by default */
+    background: rgba(0,0,0,0.45); 
     border: none;
     color: var(--color-text);
 }
 
 .plan-card--highlight {
-    background-color: var(--color-primary) !important; /* primeira coluna pedida */
+    background-color: var(--color-primary) !important; 
 
 }
 
