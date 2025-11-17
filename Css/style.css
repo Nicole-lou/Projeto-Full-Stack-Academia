@@ -10,6 +10,9 @@ body {
     font-family: 'Anton', sans-serif;
     margin-top: 80px;
     background-size: cover;
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh;
     
 }
 
@@ -520,6 +523,7 @@ body {
     font-family: 'Anton', sans-serif;
     color: var(--color-text);
     padding: 2rem 0;
+    margin-top: auto; /* Push footer to bottom if content is short */
 }
 
 .site-footer h4 {
