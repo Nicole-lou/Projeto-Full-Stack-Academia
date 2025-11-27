@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base fonts: Montserrat for most UI, Anton for brand */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Anton', sans-serif;
+    margin-top: 80px;
+    background-size: cover;
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh;
+    
+}
+
+:root {
+    --color-primary: #bf0b0b;
+    --color-secondary: #b4b4b4;
+    --color-background: #d4d4dc;
+    --color-text: #ffffff;
+    --color-accent: #5a5557;
+    --color-subtext: #1b1919;
+}
+
+.logo-text {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5rem;
+}
+
+.logo-text span {
+    color: var(--color-primary);
+}
+
+/* escolha de planos */
