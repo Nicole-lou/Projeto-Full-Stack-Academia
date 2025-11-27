@@ -8,7 +8,7 @@ Status: Em Desenvolvimento 🚧
 
 ## 💻 Tecnologias Utilizadas até agora:
 - Frontend: HTML, CSS, JavaScript.
-- Framework: BOOTSTRAP
+- Framework: BOOTSTRAP e VS Code
 
 ## 💻 Tecnologias Futuras Por Enquanto:
 - Back end: Em andamento - Repositório: academia-backend-fullstack
