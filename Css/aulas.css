@@ -20,6 +20,20 @@ body {
     --color-subtext: #1b1919;
 }
 
+@media (max-width: 767px) {
+    .cards-grid {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 1rem !important;
+      align-items: start;
+    }
+
+    /* ensure each card has spacing when not inside a grid */
+    .cards-grid .card {
+      margin: 0 auto;
+    }
+  }
+
 #banner-classes {
      position: relative;
     width: 100%;
