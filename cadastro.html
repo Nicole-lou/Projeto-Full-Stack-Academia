@@ -27,14 +27,50 @@
 
 <!--formulário de cadastro-->
 
-<!-- Navbar fixa -->
-    <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
-        <div class="container">
-            <a class="navbar-brand logo-text" href="index.html">
-                Energy <span>Fitness</span>
+ <!-- Navbar menu -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+
+      <!-- Logo -->
+      <img src="Img/Logo.png" alt="Logo Energy Fitness" width="50" height="50"
+        class="d-inline-block align-text-top logo" />
+      <a class="navbar-brand logo-text" href="index.html">Energy <span>Fitness</span></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Links menu-->
+      <div class="collapse navbar-collapse links" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sobre
             </a>
-        </div>
-    </nav>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#Endereço">Endereço</a></li>
+              <li><a class="dropdown-item" href="Aulas.html">Nossas Aulas</a></li>
+              <li><a class="dropdown-item" href="#gym-passes">Planos</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Fim Navbar menu -->
+
 
     <!-- Seção do formulário CENTRALIZADA -->
     <section id="cadastro">
