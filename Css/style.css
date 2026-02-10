@@ -8,7 +8,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Anton', sans-serif;
-    margin-top: 80px;
+    padding-top: 80px; /* evita conteúdo escondido pelo navbar fixo */
     background-size: cover;
     display: flex; 
     flex-direction: column; 
@@ -23,6 +23,8 @@ body {
     --color-text: #ffffff;
     --color-accent: #5a5557;
     --color-subtext: #1b1919;
+    /* variável auxiliar para ajustar se necessário */
+    --navbar-height: 80px;
 }
 
 /* Navbar styles */
@@ -115,7 +117,7 @@ body {
     /* Ajuste para o Título (H1) */
     .Banner h1 {
         /* Diminuir a fonte drasticamente para caber */
-        font-size: 1.4rem; 
+        font-size: 1.6rem; 
         
         /* Ajustar a posição para que o H1 não fique muito baixo */
         top: 50%; 
@@ -124,7 +126,7 @@ body {
     /* Ajuste para o Parágrafo (P) */
     .Banner p {
         /* Diminuir a fonte */
-        font-size: 0.8rem;
+        font-size: 0.95rem;
         
         /* Afastar o P do H1 o suficiente para não sobrepor */
         top: 65%; 
@@ -566,4 +568,151 @@ body {
         gap: 0.75rem;
         flex-wrap: wrap;
     }
+}
+
+/* ===== Responsividade e ajustes de espaçamento adicionais ===== */
+
+/* Imagens e ícones responsivos por padrão */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Banner / Carrossel: posicionamento mais robusto para todos os tamanhos */
+.carousel-item.Banner {
+    position: relative; /* tornar o item referência para posicionamento absoluto do texto */
+}
+.carousel-item.Banner > div {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 12%;
+    text-align: center;
+    padding: 0 1rem;
+    width: 90%;
+    max-width: 1100px;
+}
+
+/* remover posicionamentos absolutos individuais para evitar sobreposição em telas pequenas */
+.Banner h1,
+.Banner p,
+.Banner button {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+}
+
+/* Ajuste de iframe do mapa para ser fluido */
+.map-container iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+/* Ajustes gerais de espaçamento para containers e botões */
+.container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.banner-btn {
+    display: inline-block;
+    margin-top: 0.8rem;
+}
+
+/* Cards e planos: garantir boa leitura em telas pequenas */
+.plan-card .card-body {
+    min-height: unset; /* permitir natural flow em telas pequenas */
+}
+
+/* Personal trainers: garantir responsividade e espaçamento */
+.personal-container {
+    gap: 1.25rem;
+}
+.personal-box {
+    padding: 1.25rem;
+}
+
+/* Footer: melhorar espaçamento em telas pequenas */
+.site-footer {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+/* ===== Breakpoints ===== */
+@media (max-width: 992px) {
+    .Banner h1 {
+        font-size: 1.6rem;
+    }
+    .Banner p {
+        font-size: 0.95rem;
+    }
+    .about-banner {
+        height: auto;
+        min-height: 320px;
+        padding: 2.5rem 0;
+        background-position: center;
+    }
+    .mission-img {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Banner h1 {
+        font-size: 1.4rem;
+    }
+    .Banner p {
+        font-size: 0.9rem;
+    }
+    .banner-btn {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+    .personal-container {
+        gap: 0.75rem;
+    }
+    .personal-box {
+        max-width: 100%;
+    }
+    .map-container iframe {
+        height: 240px;
+    }
+}
+
+@media (max-width: 576px) {
+    .Banner h1 {
+        font-size: 1.1rem;
+    }
+    .Banner p {
+        font-size: 0.8rem;
+    }
+    .logo-text {
+        font-size: 1.4rem;
+    }
+    .navbar .container-fluid {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .adress-hours {
+        margin: 1.5rem 0;
+    }
+    .plan-features li {
+        font-size: 0.95rem;
+    }
+    .footer-copy {
+        font-size: 0.95rem;
+    }
+    .map-container iframe {
+        height: 200px;
+    }
+}
+
+/* pequenas melhorias para esconder scrollbars feias em mobile */
+@supports (-webkit-overflow-scrolling: touch) {
+    ::-webkit-scrollbar { width: 6px; }
 }
